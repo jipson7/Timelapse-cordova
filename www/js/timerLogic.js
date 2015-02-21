@@ -16,18 +16,21 @@ function timerLogic() {
 
 	var timerTitle = $("<div class = 'timeText'>Next memory in:</div>");
 
-	var minusButton = $("<button class = 'timeButton'>-</button>");
+	var timerTitle = $("<div class = 'row well well-lg text-center'><h1>Next memory in:</h1></div>");
 
-	var plusButton = $("<button class = 'timeButton'>+</button>");
+	var timeRemaining = $("<div class = 'text-center col-xs-6'>" + getRemainingTime() + "</div>");
 
-	var timeRemaining = $("<div class = 'timeText'>" + getRemainingTime() + "</div>");
+	var minusButton = $("<button type='button' class = 'col-xs-offset-4 col-xs-1 btn btn-default'>-</button>");
 
-	var addMemoryButton = $("<button class = 'memoryButton'>Add Memory</button>");
+	var plusButton = $("<button type='button' class = 'col-xs-1 btn btn-default'>+</button>");
+
+
+	var addMemoryButton = $("<div class='row'><button type='button' class='col-xs-offset-4 col-xs-4 btn btn-primary btn-large'>Add Memory</button></div>");
 
 
 	$(".mainBody").append(timerTitle);
-	$(".mainBody").append(minusButton);
 	$(".mainBody").append(timeRemaining);
+	$(".mainBody").append(minusButton);
 	$(".mainBody").append(plusButton);
 	$(".mainBody").append(addMemoryButton);
 
