@@ -1,8 +1,8 @@
-##A Cordova Project for McHacks
+#   A Cordova Project for McHacks
 
-####To Install:
+A Repo for McHacks2015 @ Mcgill
 
-First install cordova and node/npm
+First install cordova and node/npm, then:
 
 ```
 
