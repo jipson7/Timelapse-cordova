@@ -3,4 +3,4 @@
 
 #platform folder ignore
 platforms
-plugins
+node_modules

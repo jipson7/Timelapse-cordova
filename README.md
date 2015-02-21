@@ -2,12 +2,50 @@
 
 ####To Install:
 
-1. "install cordova and node/npm"
+First install cordova and node/npm
 
-2. git clone git@github.com:jipson7/mchacks-cordova.git
+```
 
-3. cd mchacks-cordova/
+git clone git@github.com:jipson7/mchacks-cordova.git
 
-4. cordova platform add ios android
+```
 
-	* run "cordova run ios" or "cordova run android" to test.
+```
+
+cd mchacks-cordova/
+
+```
+
+```
+
+cordova platform add ios android
+
+```
+
+Note for deploying ios on a simulator, you will also need to perform
+
+```
+
+npm install -g ios-sim ios-deploy
+
+```
+
+####Then to run:
+
+```
+
+cordova run ios
+
+```
+
+For testing on android it is suggested to use a device. Simply plug the device in and run
+
+```
+
+cordova run android
+
+```
+
+both of these commands will perform the build and launch in one step
+
+
