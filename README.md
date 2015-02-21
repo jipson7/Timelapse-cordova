@@ -1,13 +1,28 @@
-##A Cordova Project for McHacks
+#   A Cordova Project for McHacks
 
-####To Install:
+A Repo for McHacks2015 @ Mcgill
 
-1. "install cordova and node/npm"
+##  Technologies:
 
-2. git clone git@github.com:jipson7/mchacks-cordova.git
+* (Cordova)[http://cordova.apache.org/]
 
-3. cd mchacks-cordova/
+##  To Install:
 
-4. cordova platform add ios android
+1. Install Node and run  
 
-	* run "cordova run ios" or "cordova run android" to test.
+    npm install cordova -g
+
+2. Clone this repo 
+
+    git clone git@github.com:jipson7/mchacks-cordova.git
+
+3. Make sure you have (ant)[http://ant.apache.org/] installed
+
+4. Goto the mchacks directory and run 
+
+    cordova platform add ios android
+
+5. To test run: 
+
+    cordova run ios
+    cordova run android
