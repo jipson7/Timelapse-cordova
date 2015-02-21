@@ -1,6 +1,8 @@
 #   A Cordova Project for McHacks
 
-A Repo for McHacks2015 @ Mcgill
+>A Repo for McHacks2015 @ Mcgill
+
+####To install and setup:
 
 First install cordova and node/npm, then:
 
@@ -29,6 +31,25 @@ Note for deploying ios on a simulator, you will also need to perform
 npm install -g ios-sim ios-deploy
 
 ```
+
+####To add plugins:
+
+We will just use the device plugin for now and can add the other ones to this command as needed. So run that command below.
+
+```
+
+cordova plugin add org.apache.cordova.device
+
+```
+
+Other plugins include (but may not be limited too)
+
+if you add one to the command above. Delete it from this list. Please test both android and ios before doing this.
+
+```
+org.apache.cordova.network-information org.apache.cordova.battery-status org.apache.cordova.device-motion org.apache.cordova.device-orientation org.apache.cordova.geolocation org.apache.cordova.camera org.apache.cordova.media org.apache.cordova.media-capture org.apache.cordova.file org.apache.cordova.file-transfer org.apache.cordova.dialogs org.apache.cordova.vibration org.apache.cordova.contacts org.apache.cordova.globalization org.apache.cordova.splashscreen org.apache.cordova.inappbrowser org.apache.cordova.console
+```
+
 
 ####Then to run:
 

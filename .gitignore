@@ -4,6 +4,8 @@
 node_modules
 plugins/
 platforms/
+plugins/android.json
+plugins/ios.json
 
 
 # Android
