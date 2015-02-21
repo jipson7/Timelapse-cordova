@@ -2,11 +2,11 @@
 
 ####To Install:
 
-1. install cordova and node/npm
+1. "install cordova and node/npm"
 
-2. "Clone this repo"
+2. git remote add origin git@github.com:jipson7/mchacks-cordova.git
 
-3. cd mchacks/
+3. cd mchacks-cordova/
 
 4. cordova platform ios android
 
