@@ -14,18 +14,16 @@ function timerLogic() {
 	
 	}
 
-	var timerTitle = $("<div class = 'timeText'>Next memory in:</div>");
 
-	var timerTitle = $("<div class = 'row well well-lg text-center'><h1>Next memory in:</h1></div>");
+	var timerTitle = $("<div class = 'row well well-lg text-center'><h1>Next memory in:</h1></div><br>");
 
 	var timeRemaining = $("<div class = 'text-center col-xs-6'>" + getRemainingTime() + "</div>");
 
 	var minusButton = $("<button type='button' class = 'col-xs-offset-4 col-xs-1 btn btn-default'>-</button>");
 
-	var plusButton = $("<button type='button' class = 'col-xs-1 btn btn-default'>+</button>");
+	var plusButton = $("<button type='button' class = 'col-xs-1 btn btn-default'>+</button><br><br><br><br><br><br>");
 
-
-	var addMemoryButton = $("<div class='row'><button type='button' class='col-xs-offset-4 col-xs-4 btn btn-primary btn-large'>Add Memory</button></div>");
+	var addMemoryButton = $("<div class='row'><button type='button' class='col-xs-offset-4 col-xs-4 btn btn-primary btn-xl'>Add Memory</button></div>");
 
 
 	$(".mainBody").append(timerTitle);
