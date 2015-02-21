@@ -1,0 +1,5 @@
+#System ignore file for caleb and elias
+.DS_Store
+
+#platform folder ignore
+platforms
