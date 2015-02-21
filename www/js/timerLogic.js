@@ -47,20 +47,20 @@ function startCountdown() {
 
 	timerHolder = setTimeout(function () {
 
-		takePicture();
+		restartCountdown();
 
 	}, currentTimeDelay);
 
 }
 
 //this is a temporary function 
-function takePicture() {
+function restartCountdown() {
 
-	alert("snap");
+	takePicture();
 
 	timerHolder = setTimeout(function () {
 
-		takePicture();
+		restartCountdown();
 
 	}, currentTimeDelay);
 
