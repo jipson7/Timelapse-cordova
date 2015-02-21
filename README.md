@@ -47,7 +47,23 @@ Other plugins include (but may not be limited too)
 if you add one to the command above. Delete it from this list. Please test both android and ios before doing this.
 
 ```
-org.apache.cordova.network-information org.apache.cordova.battery-status org.apache.cordova.device-motion org.apache.cordova.device-orientation org.apache.cordova.geolocation org.apache.cordova.camera org.apache.cordova.media org.apache.cordova.media-capture org.apache.cordova.file org.apache.cordova.file-transfer org.apache.cordova.dialogs org.apache.cordova.vibration org.apache.cordova.contacts org.apache.cordova.globalization org.apache.cordova.splashscreen org.apache.cordova.inappbrowser org.apache.cordova.console
+* org.apache.cordova.network-information
+* org.apache.cordova.battery-status
+* org.apache.cordova.device-motion
+* org.apache.cordova.device-orientation
+* org.apache.cordova.geolocation
+* org.apache.cordova.camera
+* org.apache.cordova.media
+* org.apache.cordova.media-capture
+* org.apache.cordova.file
+* org.apache.cordova.file-transfer
+* org.apache.cordova.dialogs
+* org.apache.cordova.vibration
+* org.apache.cordova.contacts
+* org.apache.cordova.globalization
+* org.apache.cordova.splashscreen
+* org.apache.cordova.inappbrowser
+* org.apache.cordova.console
 ```
 
 
