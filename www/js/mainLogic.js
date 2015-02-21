@@ -1,27 +1,26 @@
 function mainInit() {
 
-	var pageTitle = $("<div class = 'pageTitle'>timelapse</div>");
+	var pageTitle = $("<div class = 'row well well-lg text-center'><h1>Time Lapse</h1></div><br>");
 
+	var minutesLabel = $("<div class = 'col-xs-6 mainLabels'>Minutes Interval: </div>");
 
-	var minutesLabel = $("<div class = 'mainLabels'>Minutes Interval: </div>");
+	var minutesPlus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='incrementMinutesCounter()'>+</button>");
 
-	var minutesPlus = $("<button class = 'plusMinusButton' onclick='incrementMinutesCounter()'>+</button>");
+	var minutesNumber = $("<input type='text' value='60' name='minutesNumber' class='mainInputField col-xs-2'>");
 
-	var minutesNumber = $("<input type='text' value='60' name='minutesNumber' class='mainInputField'>");
-
-	var minutesMinus = $("<button class = 'plusMinusButton' onclick='decrementMinutesCounter()'>-</button>");
+	var minutesMinus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='decrementMinutesCounter()'>-</button>");
 
 	
-	var daysLabel = $("<div class = 'mainLabels'>Days: </div>");
+	var daysLabel = $("<br><br><br><div class = 'col-xs-2-offset mainLabels col-xs-6'>Days: </div>");
 
-	var daysPlus = $("<button class = 'plusMinusButton' onclick='incrementDaysCounter()'>+</button>");
+	var daysPlus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='incrementDaysCounter()'>+</button>");
 	
-	var daysNumber = $("<input type='text' value='2' name='daysNumber' class='mainInputField'>");
+	var daysNumber = $("<input type='text' value='2' name='daysNumber' class=' col-xs-2 mainInputField'>");
 
-	var daysMinus = $("<button class = 'plusMinusButton' onclick='decrementDaysCounter()'>-</button>");
+	var daysMinus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='decrementDaysCounter()'>-</button>");
 
 
-	var makeMemoriesButton = $("<div class='outerCircle'><button class = 'mainButton'>Make Memories</button></div");	
+	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><div class='outerCircle'><button class = 'col-xs-offset-4 col-xs-4 btn btn-primary btn-xl mainButton'>Make Memories</button></div");	
 
 	attach(pageTitle);	
 	attach(minutesLabel);	
