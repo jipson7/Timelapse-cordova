@@ -38,6 +38,13 @@ var app = {
 
         document.addEventListener("pause", onPause, false);
 
+        document.addEventListener("resume", onResume, false);
+
+            // Handle the resume event
+            //
+        function onResume() {
+            localStorage.isActive=true;
+        }
         function onPause() {
             localStorage.isActive = false;
         }
