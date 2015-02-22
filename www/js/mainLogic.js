@@ -20,7 +20,7 @@ function mainInit() {
 	var daysMinus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='decrementDaysCounter()'>-</button>");
 
 
-	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><div onclick = 'startTimeLapse()' class='outerCircle'><button class = 'col-xs-offset-4 col-xs-4 btn btn-primary btn-xl mainButton'>Make Memories</button></div");	
+	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><button onclick = 'startTimeLapse()' class = 'col-xs-offset-2 col-xs-8 btn btn-primary btn-xl mainButton'>Make Memories</button>");	
 
 	attach(pageTitle);	
 	attach(minutesLabel);	
