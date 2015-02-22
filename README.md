@@ -38,8 +38,8 @@ We will just use the device plugin for now and can add the other ones to this co
 
 ```
 
-* cordova plugin add org.apache.cordova.device
-* cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications.git && cordova prepare
+cordova plugin add org.apache.cordova.camera org.apache.cordova.device org.apache.cordova.dialogs org.apache.cordova.file org.apache.cordova.file-transfer org.apache.cordova.device
+cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications.git && cordova prepare
 
 ```
 
@@ -89,6 +89,3 @@ both of these commands will perform the build and launch in one step
 
 ```
 
-```
-cordova plugin add org.apache.cordova.camera org.apache.cordova.device org.apache.cordova.dialogs org.apache.cordova.file org.apache.cordova.file-transfer
-```
