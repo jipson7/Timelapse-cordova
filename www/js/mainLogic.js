@@ -22,16 +22,19 @@ function mainInit() {
 
 	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><button onclick = 'startTimeLapse()' class = 'col-xs-offset-2 col-xs-8 btn btn-primary btn-xl mainButton'>Make Memories</button>");	
 
+	var helpButton = $("<i onclick='getInfoOnTimelapse()' class='glyphicon glyphicon-question-sign col-xs-offset-10 col-xs-2'></i>");
+
 	attach(pageTitle);	
 	attach(minutesLabel);	
-	attach(minutesPlus);	
-	attach(minutesNumber);	
 	attach(minutesMinus);	
+	attach(minutesNumber);	
+	attach(minutesPlus);	
 	attach(daysLabel);	
-	attach(daysPlus);	
-	attach(daysNumber);	
 	attach(daysMinus);	
+	attach(daysNumber);	
+	attach(daysPlus);	
 	attach(makeMemoriesButton);
+	attach(helpButton); 
 
 }
 
@@ -85,4 +88,25 @@ function decrementMinutesCounter() {
 
 }
 
+function getInfoOnTimelapse() {
 
+	var helpMessage = "Timelapse is a new way to make sure you're keeping a record of all of your fondest memories. With gentle reminders to take a photo as often as specified, you can be sure you no longer forget to take pictures of those precious moments. Whether its a family vacation or a hackathon in Montreal. Timelapse will help make sure you take photos to remember those magical getaways. You can then save and view your favourite photojournal slideshows or videos for as long as you like.";
+
+	$(".mainBody").empty();
+
+	$(".mainBody").append("<div class = 'row well well-lg text-center'><h1>What is Time Lapse</h1></div>");
+
+
+	$(".mainBody").append("<div class = 'row well well-lg text-center'><p>" + helpMessage  + "</p></div><br>");
+
+	$(".mainBody").append("<button id='backToMainButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='restartMainPage()'>Back to Main</button>");
+
+}
+
+function restartMainPage() {
+
+	$(".mainBody").empty();
+
+	mainInit();
+
+}

@@ -69,7 +69,7 @@ function timerLogic(duration, frequency) {
 
 	var plusButton = $("<button onclick='addMoreTime()' type='button' class = 'col-xs-2 btn btn-default'>+</button><br><br><br><br><br><br>");
 
-	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory</button></div><br><br><br>");
+	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory Now</button></div><br><br><br>");
 
 	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Cancel</button>");
 

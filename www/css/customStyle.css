@@ -47,3 +47,11 @@ input[type="number"]:focus {
 	background-color: #99CCFF;
 
 }
+
+#backToMainButton{
+
+	height: 2.2em;
+	font-size: 1.2em;
+	background-color: #99CCFF;
+
+}
