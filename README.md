@@ -89,8 +89,6 @@ both of these commands will perform the build and launch in one step
 
 ```
 
-org.apache.cordova.camera 0.3.5 "Camera"
-org.apache.cordova.device 0.3.0 "Device"
-org.apache.cordova.dialogs 0.3.0 "Notification"
-org.apache.cordova.file 1.3.3 "File"
-org.apache.cordova.file-transfer 0.5.0 "File Transfer"
+```
+cordova plugin add org.apache.cordova.camera org.apache.cordova.device org.apache.cordova.dialogs org.apache.cordova.file org.apache.cordova.file-transfer
+```

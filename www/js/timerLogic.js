@@ -237,6 +237,8 @@ function picRequestHandle() {
 
 	totalNumberOfPicturesTaken++;
 
+	getPicture();
+
 
 }
 
