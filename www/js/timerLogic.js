@@ -48,6 +48,8 @@ function timerLogic(duration, frequency) {
 
 		currentTimeDelay = frequency * 60;
 
+		secondsLeftTotal = (Math.floor(secondsLeftTotal/currentTimeDelay) * currentTimeDelay);
+
 		timeRemainingCurrentCycle = currentTimeDelay;
 		
 		startSecondsCounter();
@@ -61,25 +63,55 @@ function timerLogic(duration, frequency) {
 
 	var timerTitle = $("<div class = 'row well well-lg text-center'><h1>Next memory in:</h1></div><br>");
 
-	var minusButton = $("<button type='button' class = 'col-xs-offset-2 col-xs-2 btn btn-default'>-</button>");
+	//var minusButton = $("<button type='button' class = 'col-xs-offset-2 col-xs-2 btn btn-default'>-</button>");
 
-	var timeRemaining = $("<div id = 'timeRemainContainer' class = 'text-center col-xs-4'>" + getRemainingTime() + "</div>");
+	var timeRemaining = $("<div id = 'timeRemainContainer' class = 'col-xs-offset-3 text-center col-xs-4'>" + getRemainingTime() + "</div>");
 
 	var plusButton = $("<button type='button' class = 'col-xs-2 btn btn-default'>+</button><br><br><br><br><br><br>");
 
-	var addMemoryButton = $("<div class='row'><button id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory</button></div><br><br><br>");
+	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory</button></div><br><br><br>");
 
 	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Cancel</button>");
 
 
 	$(".mainBody").append(timerTitle);
-	$(".mainBody").append(minusButton);
+	//$(".mainBody").append(minusButton);
 	$(".mainBody").append(timeRemaining);
 	$(".mainBody").append(plusButton);
 	$(".mainBody").append(addMemoryButton);
 	$(".mainBody").append(cancelTimerButton);
 }
 
+function addMemoryHandler() {
+
+	if (timeRemainingCurrentCycle > 10) {
+
+		timeRemainingCurrentCycle = 5;	
+
+		setTimeout(function() {
+
+			clearTimeout(timerHolder);
+		
+			restartCountdown();
+
+			if (timeRemainingCurrentCycle < secondsLeftTotal) {
+
+				takePicture();
+
+			}
+
+		
+		}, 5000);
+
+
+
+	} else {
+
+		//do nothing for now
+	
+	}
+
+}
 
 function getRemainingTime() {
 
@@ -129,6 +161,7 @@ function startSecondsCounter() {
 
 }
 
+
 function restartCountdown() {
 
 
@@ -177,6 +210,8 @@ function takePicture() {
 	//do nothing for now
 	//
 	//
+	//
+	alert('snap');
 	
 	totalNumberOfPicturesTaken++;
 
