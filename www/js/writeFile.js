@@ -23,7 +23,7 @@ function writeLog(str) {
 	}, fail);
 }
 
-var i = 0;
+//var i = 0;
 function readLog() {
 	logOb.file(function(file) {
 		var reader = new FileReader();
@@ -32,11 +32,26 @@ function readLog() {
 			console.log(this.result);
 			// alert(this.result);
 			var urls = this.result;
-			var lines = urls.split("\n");
-			// alert(urls);
-			var img = document.getElementById("myImage");
-			img.src = lines[i];
-			i++;
+			var imageArr = urls.split("\n");
+ 
+            var listHtml = "<ul class='bxslider'>";
+
+            //A for loop
+            for (i = 0; i < imageArr.length; i++){
+                listHtml = listHtml + "<li><img src='" + imageArr[i] + "'/></li>";
+            }
+            listHtml += "</ul>";
+            var slideshowListing = $(listHtml);
+
+            $(".mainBody").append(slideshowListing);
+
+            $('.bxslider').bxSlider({
+              auto: true,
+              autoControls: true
+            });
+			//var img = document.getElementById("myImage");
+			//img.src = lines[i];
+			//i++;
 			// $.each(lines, function(n, elem) {
    //          	console.log(elem);
    //          	alert(elem);
