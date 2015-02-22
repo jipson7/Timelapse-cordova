@@ -38,7 +38,8 @@ We will just use the device plugin for now and can add the other ones to this co
 
 ```
 
-cordova plugin add org.apache.cordova.device
+* cordova plugin add org.apache.cordova.device
+* cordova plugin add https://github.com/katzer/cordova-plugin-local-notifications.git && cordova prepare
 
 ```
 
