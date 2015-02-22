@@ -7,7 +7,6 @@ function slideshowLogic() {
     for (i = 0; i < imageArr.length; i++){
         listHtml = listHtml + "<li><img src='" + imageArr[i] + "'/></li>";
     }
-    alert(listHtml);
 
     listHtml += "</ul>";
 
