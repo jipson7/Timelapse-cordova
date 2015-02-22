@@ -57,6 +57,24 @@ function timerLogic(duration, frequency) {
 		restartCountdown();
 
 		timerIsInitialized = true;
+
+		//local storage code for state change, is currently broken
+
+		// window.localStorage.setItem("isActive", true);
+	
+  //       document.addEventListener("pause", function () {
+		
+  //           window.localStorage.setItem("isActive", false);
+		
+		// }, false);
+
+  //       document.addEventListener("resume", function () {
+		
+				
+  //           window.localStorage.setItem("isActive", true);
+		
+		
+		// }, false);
 	
 	}
 
@@ -71,7 +89,7 @@ function timerLogic(duration, frequency) {
 
 	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory Now</button></div><br><br><br>");
 
-	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Cancel</button>");
+	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Finish</button>");
 
 
 	$(".mainBody").append(timerTitle);
@@ -214,16 +232,17 @@ function updateRemainingTime() {
 
 function picRequestHandle() {
 
-	//have to negate this post testing	
-	if(localStorage.isActive) {
 
-		notificationTest();
+	notifyUser();
 
-	} else {
+//	startCamera();
 
-		takePicture();
+//	var cameraTimeout = setTimeout(function () {
+	
+//		cancelCamera();
 
-	}
+//	}, 20000);
+
 
 	totalNumberOfPicturesTaken++;
 
@@ -231,9 +250,25 @@ function picRequestHandle() {
 }
 
 function takePicture() {
-
-	//this does nothing for now. Until elias finished anyway.
 	
 	alert("snap");
+
+}
+
+function startCamera() {
+
+
+	var cameraGUI = $("<div class='startCamera'>Im so bloody tired<button onclick = 'cancelCamera()'>Cancel</button></div>");
+
+	$(".mainBody").append(cameraGUI);
+
+	
+
+}
+
+function cancelCamera() {
+
+	
+	$("startCamera").startCamera();
 
 }

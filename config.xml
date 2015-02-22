@@ -24,6 +24,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <preference name="webviewbounce" value="false" />
-    <preference name="DisallowOverscroll" value="true"/>
+	<preference name="DisallowOverscroll" value="true"/>
+	<preference name="KeepRunning" value="false"/>
 
 </widget>

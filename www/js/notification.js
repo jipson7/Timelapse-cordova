@@ -1,4 +1,5 @@
-function notificationTest() {
+function notifyUser() {
+
 
     //waits for user to click the notification
     cordova.plugins.notification.local.on("click", function(notification) {
@@ -6,40 +7,21 @@ function notificationTest() {
     });
 
     //adds a notificaiton that TimeLapse is taking a photo
-    window.plugin.notification.local.add({message:'TimeLapse Moment',
+    window.plugin.notification.local.add({message:'Tap to take a photo or dismiss',
 					  id:1,
-					  title: 'Reminder',
+					  title: 'Timelapse',
 					  json:JSON.stringify({ test: 123 })});
     //Callback function to showConfirm()
     function onConfirm(buttonIndex) {
 	if (buttonIndex === 1){//Take Picture
-	    $(".mainBody").append("<p>start</p>");//temporary
-	    startNotificationTimer(5);
+
+		//do nothing for now
+
 	}else {//Extend 5 sec
-	    $(".mainBody").append("<p>Extend 5 sec</p>");//temporary
+
+		//do nothing for now
 	}
     }  
-
-    //Displays a counter given the amount of time
-    function startNotificationTimer(setTime) {
-	var timeToWait = setTime;
-	var timeRemaining = $("<div id = 'countdownDisplay'>" + timeToWait + "</div>");
-	$(".mainBody").append(timeRemaining);
-	var notifyIntervalClock = setInterval(function() {
-	    //display time
-    	    timeToWait--;
-    	    $timeRemaining = $("<div id = 'countdownDisplay'>" + timeToWait + "</div>");
-	    $("#countdownDisplay").html($timeRemaining);
-	}, 1000);
-
-	setTimeout(function() {
-	    clearInterval(notifyIntervalClock);
-	   //do something after 5 seconds has passed
-	    $(".mainBody").append("<p>Done<\p");//temp
-	    $(".mainBody").append("<p>Call Take Photo function</p>");//temporary(placeholder)
-	}, timeToWait * 1000);
-	
-    }
 
     // Show a custom confirmation dialog
     function showConfirm() {

@@ -55,3 +55,19 @@ input[type="number"]:focus {
 	background-color: #99CCFF;
 
 }
+
+.startCamera {
+	
+	background-color: #944DDB;
+	position: absolute;
+	z-index: 9999;
+	margin-top: 0px;
+	top:0;
+	right:0;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	font-size: 1.2em;
+
+}
+
