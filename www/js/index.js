@@ -33,7 +33,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-	mainInit();
+        localStorage.isActive = true;
+        mainInit();
+
+        document.addEventListener("pause", onPause, false);
+
+        function onPause() {
+            localStorage.isActive = false;
+        }
     },
     // Update DOM on a Received Event
 };
