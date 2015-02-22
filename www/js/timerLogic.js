@@ -30,13 +30,21 @@ function resetAllTimerInstance() {
 
 }
 
-function cancelTimelapseRecording() {
+function finishRecording() {
 
-	resetAllTimerInstance();
+	if (totalNumberOfPicturesTaken < 1) {
 
-	$(".mainBody").empty();
+		resetAllTimerInstance();
 
-	mainInit();
+		$(".mainBody").empty();
+
+		mainInit();
+
+	} else {
+
+		slideshowLogic();	
+
+	}
 
 }
 
@@ -89,7 +97,7 @@ function timerLogic(duration, frequency) {
 
 	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory Now</button></div><br><br><br>");
 
-	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Finish</button>");
+	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='finishRecording()'>Finish</button>");
 
 
 	$(".mainBody").append(timerTitle);
@@ -224,7 +232,6 @@ function endTimerProcess() {
 }
 
 function updateRemainingTime() {
-
 
 	$("#timeRemainContainer").text(getRemainingTime());
 
