@@ -67,7 +67,7 @@ function timerLogic(duration, frequency) {
 
 	var timeRemaining = $("<div id = 'timeRemainContainer' class = 'col-xs-offset-3 text-center col-xs-4'>" + getRemainingTime() + "</div>");
 
-	var plusButton = $("<button type='button' class = 'col-xs-2 btn btn-default'>+</button><br><br><br><br><br><br>");
+	var plusButton = $("<button onclick='addMoreTime()' type='button' class = 'col-xs-2 btn btn-default'>+</button><br><br><br><br><br><br>");
 
 	var addMemoryButton = $("<div class='row'><button onclick='addMemoryHandler()' id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory</button></div><br><br><br>");
 
@@ -110,6 +110,13 @@ function addMemoryHandler() {
 		//do nothing for now
 	
 	}
+
+}
+
+function addMoreTime() {
+	//TODO
+	
+
 
 }
 
