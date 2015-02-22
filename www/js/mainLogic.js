@@ -6,7 +6,7 @@ function mainInit() {
 
 	var minutesPlus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='incrementMinutesCounter()'>+</button>");
 
-	var minutesNumber = $("<input type='text' type='number' step='1' value='60' name='minutesNumber' class='mainInputField col-xs-2'>");
+	var minutesNumber = $("<input type='number' step='1' value='60' name='minutesNumber' class='mainInputField col-xs-2'>");
 
 	var minutesMinus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='decrementMinutesCounter()'>-</button>");
 
@@ -15,7 +15,7 @@ function mainInit() {
 
 	var daysPlus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='incrementDaysCounter()'>+</button>");
 	
-	var daysNumber = $("<input type='text' value='2' type='number' step='1' name='daysNumber' class=' col-xs-2 mainInputField'>");
+	var daysNumber = $("<input value='2' type='number' step='1' name='daysNumber' class='col-xs-2 mainInputField'>");
 
 	var daysMinus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='decrementDaysCounter()'>-</button>");
 
