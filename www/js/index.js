@@ -39,7 +39,7 @@ var app = {
 };
 
 //Uncomment this one to test on mobile
-//app.initialize();
+app.initialize();
 
 //Uncomment this one to test on web
-app.onDeviceReady();
+//app.onDeviceReady();
