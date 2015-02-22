@@ -6,7 +6,7 @@ function mainInit() {
 
 	var minutesPlus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='incrementMinutesCounter()'>+</button>");
 
-	var minutesNumber = $("<input type='text' value='60' name='minutesNumber' class='mainInputField col-xs-2'>");
+	var minutesNumber = $("<input type='text' type='number' step='1' value='60' name='minutesNumber' class='mainInputField col-xs-2'>");
 
 	var minutesMinus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='decrementMinutesCounter()'>-</button>");
 
@@ -15,12 +15,12 @@ function mainInit() {
 
 	var daysPlus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='incrementDaysCounter()'>+</button>");
 	
-	var daysNumber = $("<input type='text' value='2' name='daysNumber' class=' col-xs-2 mainInputField'>");
+	var daysNumber = $("<input type='text' value='2' type='number' step='1' name='daysNumber' class=' col-xs-2 mainInputField'>");
 
 	var daysMinus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='decrementDaysCounter()'>-</button>");
 
 
-	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><div class='outerCircle'><button class = 'col-xs-offset-4 col-xs-4 btn btn-primary btn-xl mainButton'>Make Memories</button></div");	
+	var makeMemoriesButton = $("<br><br><br><br><br><br><br><br><div onclick = 'startTimeLapse()' class='outerCircle'><button class = 'col-xs-offset-4 col-xs-4 btn btn-primary btn-xl mainButton'>Make Memories</button></div");	
 
 	attach(pageTitle);	
 	attach(minutesLabel);	
@@ -32,6 +32,18 @@ function mainInit() {
 	attach(daysNumber);	
 	attach(daysMinus);	
 	attach(makeMemoriesButton);
+
+}
+
+function startTimeLapse() {
+
+	var duration = parseInt($("input[name=daysNumber]").val().replace(" ", ""));
+
+	var frequency = parseInt($("input[name=minutesNumber]").val().replace(" ", ""));
+
+	$(".mainBody").empty();
+
+	timerLogic(duration, frequency);
 
 }
 
