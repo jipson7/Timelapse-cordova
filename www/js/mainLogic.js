@@ -11,7 +11,7 @@ function mainInit() {
 	var minutesMinus = $("<button class = 'col-xs-1 btn btn-default plusMinusButton' onclick='decrementMinutesCounter()'>-</button>");
 
 	
-	var daysLabel = $("<br><br><br><div class = 'col-xs-2-offset mainLabels col-xs-6'>Days: </div>");
+	var daysLabel = $("<br><br><br><div class = 'col-xs-2-offset mainLabels col-xs-6'>Days to Follow: </div>");
 
 	var daysPlus = $("<button class = 'col-xs-1 plusMinusButton btn btn-default' onclick='incrementDaysCounter()'>+</button>");
 	

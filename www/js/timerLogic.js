@@ -45,7 +45,7 @@ function finishRecording() {
 
 		slideshowLogic();	
 
-	}
+		}
 
 }
 
@@ -142,6 +142,17 @@ function addMemoryHandler() {
 
 function addMoreTime() {
 	//TODO
+	//currentTimeDelay		
+	//secondsLeftTotal
+	//timeRemainingCurrentCycle
+	//timeHolder
+	secondsLeftTotal += (currentTimeDelay - timeRemainingCurrentCycle);
+
+	timeRemainingCurrentCycle = currentTimeDelay;
+
+	ckearTimeout(timeHolder);
+
+	restartCountdown();	
 	
 
 
