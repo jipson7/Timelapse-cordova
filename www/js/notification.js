@@ -11,7 +11,8 @@ function notifyUser() {
     window.plugin.notification.local.add({message:'Tap to take a photo or dismiss',
 					  id:1,
 					  title: 'Time Lapse',
-					  json:JSON.stringify({ test: 123 })});
+					  json:JSON.stringify({ test: 123 }),
+					  icon: 'www/img/icon.png'});
     //Callback function to showConfirm()
 
     //Callback function to showConfirm()
