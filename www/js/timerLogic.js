@@ -41,6 +41,7 @@ function finishRecording() {
 		mainInit();
 
 	} else {
+		$(".mainBody").empty();
 
 		slideshowLogic();	
 
