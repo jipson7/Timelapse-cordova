@@ -14,8 +14,36 @@ body{
     background-color: #b0c4de;
 }
 
-input[number] {
+input[type="number"] {
+	display: block;
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 18px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+}
+input[type="number"]:focus {
+	outline: none;	
+}
 
-	border-style: none;
+#timeRemainContainer {
+
+	font-size: 2em;
+
+}
+
+#addMemoryButton {
+
+	height: 6em;
+	font-size: 1.5em;
+
+}
+
+#cancelTimerButton {
+
+	height: 4em;
+	font-size: 1.2em;
+	background-color: #99CCFF;
 
 }

@@ -61,20 +61,20 @@ function timerLogic(duration, frequency) {
 
 	var timerTitle = $("<div class = 'row well well-lg text-center'><h1>Next memory in:</h1></div><br>");
 
-	var timeRemaining = $("<div id = 'timeRemainContainer' class = 'text-center col-xs-6'>" + getRemainingTime() + "</div>");
+	var minusButton = $("<button type='button' class = 'col-xs-offset-2 col-xs-2 btn btn-default'>-</button>");
 
-	var minusButton = $("<button type='button' class = 'col-xs-offset-4 col-xs-1 btn btn-default'>-</button>");
+	var timeRemaining = $("<div id = 'timeRemainContainer' class = 'text-center col-xs-4'>" + getRemainingTime() + "</div>");
 
-	var plusButton = $("<button type='button' class = 'col-xs-1 btn btn-default'>+</button><br><br><br><br><br><br>");
+	var plusButton = $("<button type='button' class = 'col-xs-2 btn btn-default'>+</button><br><br><br><br><br><br>");
 
-	var addMemoryButton = $("<div class='row'><button type='button' class='col-xs-offset-4 col-xs-4 btn btn-primary btn-xl'>Add Memory</button></div>");
+	var addMemoryButton = $("<div class='row'><button id='addMemoryButton' type='button' class='col-xs-offset-2 col-xs-8 btn btn-primary btn-xl'>Add Memory</button></div><br><br><br>");
 
-	var cancelTimerButton = $("<button onclick='cancelTimelapseRecording()'>Cancel</button>");
+	var cancelTimerButton = $("<button id='cancelTimerButton'class='col-xs-offset-3 col-xs-6 btn btn-primary btn-xl' onclick='cancelTimelapseRecording()'>Cancel</button>");
 
 
 	$(".mainBody").append(timerTitle);
-	$(".mainBody").append(timeRemaining);
 	$(".mainBody").append(minusButton);
+	$(".mainBody").append(timeRemaining);
 	$(".mainBody").append(plusButton);
 	$(".mainBody").append(addMemoryButton);
 	$(".mainBody").append(cancelTimerButton);
