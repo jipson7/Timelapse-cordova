@@ -2,6 +2,7 @@ function notifyUser() {
 
 
     //waits for user to click the notification
+        //waits for user to click the notification
     cordova.plugins.notification.local.on("click", function(notification) {
 	showConfirm();
     });
@@ -9,8 +10,10 @@ function notifyUser() {
     //adds a notificaiton that TimeLapse is taking a photo
     window.plugin.notification.local.add({message:'Tap to take a photo or dismiss',
 					  id:1,
-					  title: 'Timelapse',
+					  title: 'Time Lapse',
 					  json:JSON.stringify({ test: 123 })});
+    //Callback function to showConfirm()
+
     //Callback function to showConfirm()
     function onConfirm(buttonIndex) {
 	if (buttonIndex === 1){//Take Picture
@@ -34,6 +37,6 @@ function notifyUser() {
     }  
 } 
 
-
+p
 
 
