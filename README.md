@@ -34,7 +34,7 @@ npm install -g ios-sim ios-deploy
 
 ####To add plugins:
 
-We will just use the device plugin for now and can add the other ones to this command as needed. So run that command below.
+Run the command below to install necessary plugins
 
 ```
 
@@ -48,23 +48,23 @@ Other plugins include (but may not be limited too)
 if you add one to the command above. Delete it from this list. Please test both android and ios before doing this.
 
 ```
-* org.apache.cordova.network-information
-* org.apache.cordova.battery-status
-* org.apache.cordova.device-motion
-* org.apache.cordova.device-orientation
-* org.apache.cordova.geolocation
-* org.apache.cordova.camera
-* org.apache.cordova.media
-* org.apache.cordova.media-capture
-* org.apache.cordova.file
-* org.apache.cordova.file-transfer
-* org.apache.cordova.dialogs
-* org.apache.cordova.vibration
-* org.apache.cordova.contacts
-* org.apache.cordova.globalization
-* org.apache.cordova.splashscreen
-* org.apache.cordova.inappbrowser
-* org.apache.cordova.console
+org.apache.cordova.network-information
+org.apache.cordova.battery-status
+org.apache.cordova.device-motion
+org.apache.cordova.device-orientation
+org.apache.cordova.geolocation
+org.apache.cordova.camera
+org.apache.cordova.media
+org.apache.cordova.media-capture
+org.apache.cordova.file
+org.apache.cordova.file-transfer
+org.apache.cordova.dialogs
+org.apache.cordova.vibration
+org.apache.cordova.contacts
+org.apache.cordova.globalization
+org.apache.cordova.splashscreen
+org.apache.cordova.inappbrowser
+org.apache.cordova.console
 ```
 
 
@@ -85,7 +85,4 @@ cordova run android
 ```
 
 both of these commands will perform the build and launch in one step
-
-
-```
 
