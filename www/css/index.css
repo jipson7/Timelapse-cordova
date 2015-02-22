@@ -113,3 +113,14 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#countdownDisplay{
+    height: 2.2em;
+    width: 2em;
+    border-radius: 0.5em;
+    border: 0.2em solid #6495ED;
+    margin: auto;
+    text-align: center;
+    background-color: #99CCFF;
+    font-size 1.2em;
+}

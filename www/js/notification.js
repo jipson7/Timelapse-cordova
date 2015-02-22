@@ -16,7 +16,8 @@ function notificationTest() {
 	    $(".mainBody").append("<p>start</p>");//temporary
 	    startNotificationTimer(5);
 	}else {//Extend 5 sec
-	    $(".mainBody").append("<p>Extend 5 sec</p>");//temporary
+	    $(".mainBody").append("<p>Extend to 30 sec</p>");//temporary
+	    startNotificationTimer(30);
 	}
     }  
 
@@ -29,7 +30,7 @@ function notificationTest() {
 	    //display time
     	    timeToWait--;
     	    $timeRemaining = $("<div id = 'countdownDisplay'>" + timeToWait + "</div>");
-	    $("#countdownDisplay").html($timeRemaining);
+	    $("#countdownDisplay").text(timeToWait);
 	}, 1000);
 
 	setTimeout(function() {
