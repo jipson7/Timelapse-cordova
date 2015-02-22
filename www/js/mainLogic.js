@@ -94,7 +94,7 @@ function getInfoOnTimelapse() {
 
 	$(".mainBody").empty();
 
-	$(".mainBody").append("<div class = 'row well well-lg text-center'><h1>What is Time Lapse</h1></div>");
+	$(".mainBody").append("<div class = 'row well well-lg text-center'><h2>What is Time Lapse</h2></div>");
 
 
 	$(".mainBody").append("<div class = 'row well well-lg text-center'><p>" + helpMessage  + "</p></div><br>");

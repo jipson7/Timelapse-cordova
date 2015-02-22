@@ -96,7 +96,7 @@ function addMemoryHandler() {
 
 			if (timeRemainingCurrentCycle < secondsLeftTotal) {
 
-				takePicture();
+				picRequestHandle();
 
 			}
 
@@ -176,7 +176,7 @@ function restartCountdown() {
 
 	if (secondsLeftTotal < currentTimeDelay) {
 
-		takePicture();
+		picRequestHandle();
 
 		endTimerProcess();
 
@@ -188,7 +188,7 @@ function restartCountdown() {
 
 		restartCountdown();
 
-		takePicture();
+		picRequestHandle();
 
 	}, currentTimeDelay * 1000);
 
@@ -212,14 +212,27 @@ function updateRemainingTime() {
 
 }
 
+function picRequestHandle() {
+
+	//check if app is in background
+	
+	if(appIsOnPause) {
+
+		notifyUser();
+
+	} else {
+
+		takePicture();
+
+	}
+
+	totalNumberOfPicturesTaken++;
+
+
+}
+
 function takePicture() {
 
-	//do nothing for now
-	//
-	//
-	//
-	alert('snap');
-	
-	totalNumberOfPicturesTaken++;
+	//this does nothing for now. Until elias finished anyway.
 
 }
