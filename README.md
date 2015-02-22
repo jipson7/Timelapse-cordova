@@ -1,8 +1,24 @@
-#   A Cordova Project for McHacks
+#   Timelapse
 
->A Repo for McHacks2015 @ Mcgill
+### A Cordova Project for McGill McHacks 2015
 
-####To install and setup:
+A mobile application that aids in scrap booking memories by reminding the user to take pictures periodically. 
+
+It then compiles the pictures into a slideshow to view later.
+
+![Timelapse example](/www/img/disaster.gif?raw=true "Timelapse example")
+
+##  Technologies
+
+* [Cordova](http://cordova.apache.org/)
+* [Node.js](http://nodejs.org/)
+* [jQuery](http://jquery.com/)
+* [Bootstrap](http://getbootstrap.com/)
+* [HTML5](http://www.w3schools.com/html/html5_intro.asp)
+* [Emacs](http://www.gnu.org/software/emacs/)
+* [Vim](http://www.vim.org/)
+
+##  Install instructions
 
 First install cordova and node/npm, then:
 
@@ -32,7 +48,7 @@ npm install -g ios-sim ios-deploy
 
 ```
 
-####To add plugins:
+##  Add plugins:
 
 We will just use the device plugin for now and can add the other ones to this command as needed. So run that command below.
 
@@ -68,7 +84,7 @@ if you add one to the command above. Delete it from this list. Please test both 
 ```
 
 
-####Then to run:
+##  Then to run:
 
 ```
 
