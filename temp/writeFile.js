@@ -35,6 +35,7 @@ function writeLog(str) {
 	}, fail);
 }
 
+var i = 0;
 function readLog() {
 	logOb.file(function(file) {
 		var reader = new FileReader();
@@ -44,7 +45,10 @@ function readLog() {
 			// alert(this.result);
 			var urls = this.result;
 			var lines = urls.split("\n");
-			alert(lines[0]);
+			// alert(urls);
+			var img = document.getElementById("myImage");
+			img.src = lines[i];
+			i++;
 			// $.each(lines, function(n, elem) {
    //          	console.log(elem);
    //          	alert(elem);
