@@ -16,8 +16,7 @@ function notificationTest() {
 	    $(".mainBody").append("<p>start</p>");//temporary
 	    startNotificationTimer(5);
 	}else {//Extend 5 sec
-	    $(".mainBody").append("<p>Extend to 30 sec</p>");//temporary
-	    startNotificationTimer(30);
+	    $(".mainBody").append("<p>Extend 5 sec</p>");//temporary
 	}
     }  
 
@@ -30,7 +29,7 @@ function notificationTest() {
 	    //display time
     	    timeToWait--;
     	    $timeRemaining = $("<div id = 'countdownDisplay'>" + timeToWait + "</div>");
-	    $("#countdownDisplay").text(timeToWait);
+	    $("#countdownDisplay").html($timeRemaining);
 	}, 1000);
 
 	setTimeout(function() {
@@ -53,36 +52,6 @@ function notificationTest() {
     }  
 } 
 
- cordova.plugins.notification.local.on("click", function(notification) {
-	showConfirm();
-});
 
 
 
-function notifyUserReal() {
-
-	window.plugin.notification.local.add({message:'TimeLapse Moment',
-				  id:1,
-				  title: 'Reminder',
-				  json:JSON.stringify({ test: 123 })});
-	
-    function onConfirm(buttonIndex) {
-		if (buttonIndex === 1){//Take Picture
-
-			$(".mainBody").append("<p>start</p>");//temporary
-			startNotificationTimer(5);
-
-		}else {//Extend 5 sec
-
-			$(".mainBody").append("<p>Extend 5 sec</p>");//temporary
-
-		}
-    }  
-
-}
-
-function notifyUser() {
-
-	//do nothing for now
-
-}

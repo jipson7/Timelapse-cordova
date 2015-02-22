@@ -214,11 +214,10 @@ function updateRemainingTime() {
 
 function picRequestHandle() {
 
-	//check if app is in background
-	
-	if(appIsOnPause) {
+	//have to negate this post testing	
+	if(localStorage.isActive) {
 
-		notifyUser();
+		notificationTest();
 
 	} else {
 
@@ -234,5 +233,7 @@ function picRequestHandle() {
 function takePicture() {
 
 	//this does nothing for now. Until elias finished anyway.
+	
+	alert("snap");
 
 }
