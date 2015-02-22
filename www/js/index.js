@@ -36,6 +36,12 @@ var app = {
         
         mainInit();
 
+        window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function(dir) {
+        dir.getFile("log.txt", {create:true}, function(file) {
+            logOb = file;
+        });
+    });
+
 	   },
     // Update DOM on a Received Event
 };

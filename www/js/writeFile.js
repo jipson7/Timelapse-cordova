@@ -1,5 +1,3 @@
-document.addEventListener('deviceready', onDeviceReady, false);
-
 var logOb;
 
 function fail(e) {
@@ -7,16 +5,6 @@ function fail(e) {
 	console.dir(e);
 }
 
-function onDeviceReady() {
-
-	window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, function(dir) {
-		console.log("got main dir",dir);
-		dir.getFile("log.txt", {create:true}, function(file) {
-			logOb = file;
-		});
-	});
-
-}
 
 function writeLog(str) {
 	if(!logOb) {
