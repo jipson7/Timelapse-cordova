@@ -235,40 +235,8 @@ function picRequestHandle() {
 
 	notifyUser();
 
-//	startCamera();
-
-//	var cameraTimeout = setTimeout(function () {
-	
-//		cancelCamera();
-
-//	}, 20000);
-
-
 	totalNumberOfPicturesTaken++;
 
 
 }
 
-function takePicture() {
-	
-	alert("snap");
-
-}
-
-function startCamera() {
-
-
-	var cameraGUI = $("<div class='startCamera'>Im so bloody tired<button onclick = 'cancelCamera()'>Cancel</button></div>");
-
-	$(".mainBody").append(cameraGUI);
-
-	
-
-}
-
-function cancelCamera() {
-
-	
-	$("startCamera").startCamera();
-
-}
